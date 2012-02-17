@@ -1,0 +1,7 @@
+#executáveis
+*.exe
+
+#automaticamente gerados
+*.o
+*.err
+*.out
