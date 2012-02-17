@@ -6,7 +6,7 @@ function validaX:integer{s};
 begin
 	write(output, 'Digite um numero maior que um: ');
 	readln(input, x);
-	while (x <= 1) do
+	while (x <= 1) do {verifica se o número digitado é realmente maior que 1}
 	begin
 		write(output, 'Eu disse MAIOR que 1. Digite novamente: ');
 		readln(input, x);
@@ -26,10 +26,10 @@ begin
 		begin
 			resto := x mod i;
 			if (resto = 0) then
-				writeln(output, 'Nao eh primo');
-				exit;
+				writeln(output, 'Nao eh primo'); {ao encontrar resto zero, exibe a mensagem de que não é primo e sai da procedure}
+				exit; {exit; para sair da procedure http://www.gnu-pascal.de/gpc/Exit.html   e   http://www.freepascal.org/docs-html/rtl/system/exit.html}
 		end;
-		writeln(output,'Eh primo');
+		writeln(output,'Eh primo'); {caso passe por todo o for e não encontre resto zero, só pode ser primo}
 	end;
 end;
 
